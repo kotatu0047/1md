@@ -5,7 +5,10 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts-ts": "3.1.0"
+    "react-markdown": "^4.1.0",
+    "react-scripts-ts": "3.1.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -14,6 +17,8 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@types/redux-thunk": "^2.1.0",
+    "@types/redux": "^3.6.0",
     "@types/enzyme": "^3.10.1",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.15",
