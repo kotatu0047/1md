@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './App.css';
-
-const ReactMarkdown = require('react-markdown');
+import ReactMarkdown from 'react-markdown';
 
 const input = '# This is a header\n\n - item1\n\n   - item2\n\n### header2';
 
