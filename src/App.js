@@ -1,12 +1,11 @@
 import * as React from 'react';
 import './App.css';
+import ReactMarkdown from 'react-markdown';
 
-const ReactMarkdown = require('react-markdown');
-
-const input: string = '# This is a header\n\n - item1\n\n       - item2\n\n### header2';
+const input = '# This is a header\n\n - item1\n\n   - item2\n\n### header2';
 
 class App extends React.Component {
-    public render() {
+    render() {
         return (
             <div className="App">
                 <header className="App-header">
