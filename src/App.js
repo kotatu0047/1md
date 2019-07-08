@@ -9,7 +9,13 @@ class App extends React.Component {
         this.state = {
             input: '',
         };
-        this.socket = io('http://localhost:8888');
+
+        if (process.env.NODE_ENV === 'production') {
+            this.socket = io(':8888');
+        } else if (process.env.NODE_ENV === "development") {
+            this.socket = io('http://localhost:8888');
+        }
+
         this.socket.on('load', (data) => {
             console.log(data);
             this.setState({input: data.MDText});
@@ -32,6 +38,7 @@ class App extends React.Component {
             <div className="App">
                 <header className="App-header">
                     <h1 className="App-title">1md</h1>
+
                 </header>
                 <main className="main">
                     <textarea value={this.state.input} onChange={this.handleTextChange} className="textarea" cols={30}
